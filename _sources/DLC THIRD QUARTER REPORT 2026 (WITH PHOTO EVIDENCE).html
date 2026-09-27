@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DLC THIRD QUARTER REPORT 2026 (WITH PHOTO EVIDENCE)</title>
+<style>
+  @page {
+    size: letter landscape;
+    margin: 8mm 12mm 8mm 12mm;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    font-size: 9.5pt;
+    line-height: 1.2;
+    background: #fff;
+  }
+
+  .page {
+    page-break-after: always;
+    height: 100%;
+    position: relative;
+  }
+  .page:last-child {
+    page-break-after: avoid;
+  }
+
+  /* Header Section */
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  .header-logo-left {
+    width: 60px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .header-logo-right {
+    width: 102px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .header-center {
+    text-align: center;
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+  .header-title {
+    font-size: 12.5pt;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    margin: 0 0 2px 0;
+    text-transform: uppercase;
+  }
+  .header-subtitle-dept {
+    font-size: 11pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0 0 2px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+  .header-subtitle-group {
+    font-size: 10.5pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+
+  /* Metadata Section */
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9.5pt;
+    font-weight: bold;
+    margin: 6px 0 8px 0;
+    padding: 0 5px;
+  }
+  .meta-item {
+    display: inline-flex;
+    align-items: baseline;
+  }
+  .meta-val {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    min-width: 90px;
+    padding: 0 8px 1px 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /* Table Section */
+  table.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  table.report-table th,
+  table.report-table td {
+    border: 1px solid #000;
+    padding: 5px 6px;
+    vertical-align: top;
+    font-size: 9pt;
+    line-height: 1.2;
+  }
+  table.report-table th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 8.8pt;
+    letter-spacing: 0.2px;
+    padding: 5px 4px;
+  }
+  
+  .col-sn { width: 4.5%; text-align: center; }
+  .col-group { width: 11.5%; text-align: left; }
+  .col-cm { width: 6.5%; text-align: center; }
+  .col-loc { width: 12.5%; text-align: left; }
+  .col-lga { width: 7%; text-align: center; }
+  .col-act { width: 33.5%; text-align: justify; }
+  .col-ach { width: 14%; text-align: left; }
+  .col-rem { width: 10.5%; text-align: left; }
+
+  td.center { text-align: center; }
+
+  .act-title {
+    font-weight: bold;
+  }
+
+  /* Sign-off Footer */
+  .sign-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 10px;
+    padding: 0 5px;
+    font-size: 9.5pt;
+    font-weight: bold;
+  }
+  .sign-line {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    min-width: 220px;
+    padding: 0 12px 1px 12px;
+    text-align: center;
+  }
+
+  /* Page 2 - Evidence Gallery */
+  .gallery-header {
+    text-align: center;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .gallery-title {
+    font-size: 13pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .gallery-subtitle {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #333;
+    margin-top: 2px;
+  }
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .photo-card {
+    border: 1px solid #ccc;
+    background: #fafafa;
+    padding: 6px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+  }
+  .photo-card img {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+  }
+  .photo-caption {
+    margin-top: 6px;
+    font-size: 8pt;
+    line-height: 1.25;
+  }
+  .photo-caption strong {
+    font-size: 8.5pt;
+    color: #000;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .photo-caption .date-tag {
+    color: #006600;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+  <!-- PAGE 1: OFFICIAL REPORT TABLE -->
+  <div class="page">
+    <div class="header-container">
+      <img src="file:///C:/Users/miket/Documents/CDS Quarter/nysc_logo.png" class="header-logo-left" alt="NYSC Logo">
+      <div class="header-center">
+        <div class="header-title">National Youth Service Corps National Directorate Headquarters</div>
+        <div class="header-subtitle-dept">Community Development Service Department</div>
+        <div class="header-subtitle-group">Digital Literacy Community Development Service Group</div>
+      </div>
+      <img src="file:///C:/Users/miket/Documents/CDS Quarter/dl4all_logo.jpg" class="header-logo-right" alt="DL4ALL Logo">
+    </div>
+
+    <div class="meta-row">
+      <div class="meta-item">STATE: <span class="meta-val">CROSS RIVER</span></div>
+      <div class="meta-item">ZONE: <span class="meta-val">OGOJA</span></div>
+      <div class="meta-item">QUARTER: <span class="meta-val">3RD</span></div>
+      <div class="meta-item">YEAR: <span class="meta-val">2026</span></div>
+    </div>
+
+    <table class="report-table">
+      <thead>
+        <tr>
+          <th class="col-sn">S/N</th>
+          <th class="col-group">NAME OF GROUP</th>
+          <th class="col-cm">NUMBER<br>OF C/MS</th>
+          <th class="col-loc">LOCATION</th>
+          <th class="col-lga">LGA</th>
+          <th class="col-act">NATURE OF ACTIVITIES</th>
+          <th class="col-ach">ACHIEVEMENTS</th>
+          <th class="col-rem">REMARKS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-sn">1.</td>
+          <td class="col-group">Digital Literacy CDS Group</td>
+          <td class="col-cm">8</td>
+          <td class="col-loc">St. Joseph's Vicinity, Obudu</td>
+          <td class="col-lga">Obudu</td>
+          <td class="col-act">
+            <span class="act-title">YOUTH &amp; STUDENT DIGITAL SKILLS OUTREACH:</span> DLC members carried out targeted digital literacy sensitization for youth and secondary school students within the St. Joseph's community in Obudu. The session focused on empowering young learners with smartphone literacy for educational advancement. DLCs conducted one-on-one practical coaching on utilizing mobile devices for e-learning, accessing academic research materials, leveraging search engines, and using safe communication tools.
+          </td>
+          <td class="col-ach">
+            Over 25 youths and students received practical hands-on guidance on using smartphones for educational research and collaborative study. Beneficiaries learned safe internet practices and academic discovery techniques.
+          </td>
+          <td class="col-rem">
+            Highly engaging and well-received by community youths who expressed keen interest in leveraging digital tools for their school studies.
+          </td>
+        </tr>
+        <tr>
+          <td class="col-sn">2.</td>
+          <td class="col-group">Digital Literacy CDS Group</td>
+          <td class="col-cm">10</td>
+          <td class="col-loc">Obudu Urban Dev. Authority (OUDA), Obudu</td>
+          <td class="col-lga">Obudu</td>
+          <td class="col-act">
+            <span class="act-title">INSTITUTIONAL ADVOCACY &amp; WORKPLACE CAMPAIGN:</span> DLC members conducted an official advocacy and awareness visit to the Obudu Urban Development Authority (OUDA). The corps members engaged public sector workers and agency staff on the national "DL4ALL: Not Just the Number but the Impact" initiative. The sensitization covered workplace digital tools, electronic document workflow, cloud storage fundamentals, and critical cybersecurity hygiene to prevent official data leaks and phishing attacks.
+          </td>
+          <td class="col-ach">
+            Sensitized agency staff and civil servants on digital productivity tools and office workflow efficiency. Established collaboration with agency leadership to support community-wide digital literacy initiatives.
+          </td>
+          <td class="col-rem">
+            Successful institutional engagement; agency leadership commended the NYSC DLC initiative for promoting digital readiness in the public sector.
+          </td>
+        </tr>
+        <tr>
+          <td class="col-sn">3.</td>
+          <td class="col-group">Digital Literacy CDS Group</td>
+          <td class="col-cm">12</td>
+          <td class="col-loc">Obudu Main Market, Obudu</td>
+          <td class="col-lga">Obudu</td>
+          <td class="col-act">
+            <span class="act-title">MARKET TRADERS DIGITAL INCLUSION OUTREACH:</span> Under the campaign banner "Enabling Every Nigerian Citizen to Embrace Technology with Confidence," DLC members conducted an extensive field outreach at Obudu Main Market. Deployed in peer teams, DLCs engaged traders, artisans, and transport operators directly in their shops and stalls. Members conducted practical demonstrations on mobile banking apps, USSD transactions, point-of-sale security, fraud prevention, and introduced traders to the free NITDA digital skills curriculum platform (dl4all.nitda.gov.ng).
+          </td>
+          <td class="col-ach">
+            Over 35 market stalls and small business owners were trained on mobile financial transactions, secure digital payments, and avoiding mobile scams. Several traders successfully navigated digital customer communication tools on their devices.
+          </td>
+          <td class="col-rem">
+            Very impactful field sensitization. Traders welcomed the practical business applications of digital tools; follow-up sessions were requested.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="sign-container">
+      <div>SCHEDULE OFFICER: <span class="sign-line">OKO JOHN</span></div>
+      <div>SIGNATURE &amp; DATE: <span class="sign-line">24/9/2026</span></div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: PHOTOGRAPHIC EVIDENCE APPENDIX -->
+  <div class="page">
+    <div class="header-container" style="margin-bottom: 2px;">
+      <img src="file:///C:/Users/miket/Documents/CDS Quarter/nysc_logo.png" class="header-logo-left" style="width: 48px;" alt="NYSC Logo">
+      <div class="header-center">
+        <div class="gallery-title">ANNEX: PHOTOGRAPHIC EVIDENCE OF THIRD QUARTER (Q3) 2026 ACTIVITIES</div>
+        <div class="gallery-subtitle">Digital Literacy CDS Group • Obudu Local Government Area, Cross River State • Zone: Ogoja</div>
+      </div>
+      <img src="file:///C:/Users/miket/Documents/CDS Quarter/dl4all_logo.jpg" class="header-logo-right" style="width: 85px;" alt="DL4ALL Logo">
+    </div>
+
+    <hr style="border: none; border-top: 1.5px solid #000; margin: 4px 0 10px 0;">
+
+    <div class="photo-grid">
+      <!-- Photo 1: July Outreach -->
+      <div class="photo-card">
+        <img src="file:///C:/Users/miket/Documents/CDS Quarter/IMG-20260925-WA0042.jpg" alt="July Outreach">
+        <div class="photo-caption">
+          <strong>Activity 1: Youth Digital Outreach</strong>
+          <span class="date-tag">Date: Thursday, 02/07/2026</span><br>
+          <em>Location:</em> St. Joseph's Vicinity, Obudu.<br>
+          DLC corps member providing hands-on smartphone navigation and e-learning guidance to a community student.
+        </div>
+      </div>
+
+      <!-- Photo 2: July Banner Presentation -->
+      <div class="photo-card">
+        <img src="file:///C:/Users/miket/Documents/CDS Quarter/IMG-20260925-WA0043.jpg" alt="July Banner">
+        <div class="photo-caption">
+          <strong>Activity 1: DL4ALL Campaign Launch</strong>
+          <span class="date-tag">Date: Thursday, 02/07/2026</span><br>
+          <em>Location:</em> Obudu Community.<br>
+          DLC representatives presenting the official DL4ALL / NITDA community empowerment campaign banner.
+        </div>
+      </div>
+
+      <!-- Photo 3: August Institutional Outreach -->
+      <div class="photo-card">
+        <img src="file:///C:/Users/miket/Documents/CDS Quarter/IMG-20260925-WA0044.jpg" alt="August Advocacy">
+        <div class="photo-caption">
+          <strong>Activity 2: Institutional Advocacy</strong>
+          <span class="date-tag">Date: Thursday, 06/08/2026</span><br>
+          <em>Location:</em> Obudu Urban Dev. Authority.<br>
+          Full DLC squad sensitization visit promoting public sector digital productivity and workplace cyber hygiene.
+        </div>
+      </div>
+
+      <!-- Photo 4: September Market Outreach -->
+      <div class="photo-card">
+        <img src="file:///C:/Users/miket/Documents/CDS Quarter/IMG-20260919-WA0070.jpg" alt="September Market Outreach">
+        <div class="photo-caption">
+          <strong>Activity 3: Market Traders Outreach</strong>
+          <span class="date-tag">Date: Thursday, 17/09/2026</span><br>
+          <em>Location:</em> Obudu Main Market.<br>
+          Corps members deployed for shop-to-shop trader digital inclusion, mobile money coaching, and fraud prevention.
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row for more field photos -->
+    <div class="photo-grid" style="margin-top: 10px;">
+      <!-- Photo 5: Market coaching woman -->
+      <div class="photo-card">
+        <img src="file:///C:/Users/miket/Documents/CDS Quarter/IMG-20260919-WA0102.jpg" alt="Trader Coaching">
+        <div class="photo-caption">
+          <strong>Traders Practical Coaching</strong>
+          <span class="date-tag">Date: Thursday, 17/09/2026</span><br>
+          <em>Location:</em> Obudu Main Market.<br>
+          DLC team demonstrating basic business communication and customer records on mobile device to a market woman.
+        </div>
+      </div>
+
+      <!-- Photo 6: Shop stall demo -->
+      <div class="photo-card">
+        <img src="file:///C:/Users/miket/Documents/CDS Quarter/IMG-20260925-WA0039.jpg" alt="Shop Coaching">
+        <div class="photo-caption">
+          <strong>One-on-One Digital Tutoring</strong>
+          <span class="date-tag">Date: Thursday, 17/09/2026</span><br>
+          <em>Location:</em> Obudu Main Market.<br>
+          Corps member guiding a young artisan shop owner on utilizing smartphone digital tools for commerce.
+        </div>
+      </div>
+
+      <!-- Photo 7: Male Youth Guidance -->
+      <div class="photo-card">
+        <img src="file:///C:/Users/miket/Documents/CDS Quarter/IMG-20260925-WA0040.jpg" alt="Youth Guidance">
+        <div class="photo-caption">
+          <strong>Peer-to-Peer Digital Coaching</strong>
+          <span class="date-tag">Date: Thursday, 02/07/2026</span><br>
+          <em>Location:</em> Obudu Community.<br>
+          DLC guiding a community youth on smartphone e-learning tools and productivity applications.
+        </div>
+      </div>
+
+      <!-- Photo 8: Authority building entrance -->
+      <div class="photo-card">
+        <img src="file:///C:/Users/miket/Documents/CDS Quarter/IMG-20260925-WA0041.jpg" alt="OUDA Visit">
+        <div class="photo-caption">
+          <strong>Public Sector Engagement</strong>
+          <span class="date-tag">Date: Thursday, 06/08/2026</span><br>
+          <em>Location:</em> Obudu Urban Dev. Authority.<br>
+          DLC group delegation at the entrance of OUDA headquarters during the digital transformation campaign.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

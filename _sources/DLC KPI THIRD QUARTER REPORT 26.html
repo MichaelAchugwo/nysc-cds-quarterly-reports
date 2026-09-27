@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DLC KPI THIRD QUARTER REPORT 26</title>
+<style>
+  @page {
+    size: letter landscape;
+    margin: 8mm 12mm 8mm 12mm;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    font-size: 9.5pt;
+    line-height: 1.25;
+    background: #fff;
+  }
+
+  .page {
+    page-break-after: always;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .page:last-child {
+    page-break-after: avoid;
+  }
+
+  /* Header Section */
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  .header-logo-left {
+    width: 60px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .header-logo-right {
+    width: 102px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .header-center {
+    text-align: center;
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+  .header-title {
+    font-size: 12.5pt;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    margin: 0 0 2px 0;
+    text-transform: uppercase;
+  }
+  .header-subtitle-dept {
+    font-size: 11pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0 0 2px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+  .header-subtitle-group {
+    font-size: 10.5pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0 0 2px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+  .header-subtitle-lga {
+    font-size: 10pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+
+  /* Cover Page Styles */
+  .cover-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+  }
+  .cover-report-title {
+    font-size: 16pt;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 50px 0;
+  }
+  .cover-signatures {
+    width: 100%;
+    margin-top: 40px;
+    font-size: 10pt;
+    font-weight: bold;
+  }
+  .cover-sign-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+  .sign-underline {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    min-width: 250px;
+    padding: 0 15px 1px 15px;
+    text-align: center;
+  }
+
+  /* Table Page Styles */
+  .kpi-meta-box {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 9.5pt;
+  }
+  .kpi-meta-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    padding: 0 5px;
+  }
+  .kpi-meta-sub {
+    border: 1px solid #000;
+    padding: 4px 8px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    background: #f9f9f9;
+  }
+
+  table.kpi-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  table.kpi-table th,
+  table.kpi-table td {
+    border: 1px solid #000;
+    padding: 5px 6px;
+    vertical-align: middle;
+    font-size: 8.8pt;
+    line-height: 1.22;
+  }
+  table.kpi-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+    font-size: 8.5pt;
+    letter-spacing: 0.2px;
+    padding: 4px 3px;
+  }
+  td.top-align {
+    vertical-align: top;
+  }
+  td.center {
+    text-align: center;
+  }
+  td.justify {
+    text-align: justify;
+  }
+  td.bold {
+    font-weight: bold;
+  }
+  .total-row td {
+    background-color: #f7f7f7;
+    font-weight: bold;
+    font-size: 9pt;
+  }
+
+  .kpi-sign-section {
+    margin-top: 15px;
+    padding: 0 10px;
+    font-size: 9.2pt;
+    font-weight: bold;
+  }
+  .kpi-sign-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+  .dotted-line {
+    border-bottom: 1px dotted #000;
+    display: inline-block;
+    min-width: 160px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  /* Gallery Pages */
+  .gallery-page-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery-heading {
+    font-weight: bold;
+    font-size: 11pt;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    text-decoration: underline;
+  }
+  .gallery-caption-title {
+    font-weight: bold;
+    font-size: 10pt;
+    margin-bottom: 12px;
+    color: #111;
+  }
+  .gallery-grid-3 {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 12px;
+    flex-grow: 1;
+    align-items: center;
+  }
+  .gallery-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    flex-grow: 1;
+    align-items: center;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  .gallery-card {
+    border: 1px solid #ccc;
+    background: #fafafa;
+    padding: 6px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .gallery-card img {
+    max-width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+  }
+  .gallery-card-desc {
+    margin-top: 6px;
+    font-size: 8.5pt;
+    color: #333;
+    line-height: 1.25;
+  }
+</style>
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- PAGE 1: COVER PAGE -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="header-container">
+      <img src="nysc_logo.png" class="header-logo-left" alt="NYSC Logo">
+      <div class="header-center">
+        <div class="header-title">National Youth Service Corps National Directorate Headquarters</div>
+        <div class="header-subtitle-dept">Community Development Service Department</div>
+        <div class="header-subtitle-group">Digital Literacy Community Development Service Group</div>
+        <div class="header-subtitle-lga">Obudu L.G.A, Cross River</div>
+      </div>
+      <img src="dl4all_logo.jpg" class="header-logo-right" alt="DL4ALL Logo">
+    </div>
+
+    <div class="cover-body">
+      <div></div>
+      <div class="cover-report-title">
+        3RD QUARTER CDS KEY PERFORMANCE INDICATOR REPORT, 2026
+      </div>
+
+      <div class="cover-signatures">
+        <div class="cover-sign-row">
+          <div>Schedule Officer: <span class="sign-underline">OKO JOHN</span></div>
+          <div>Signature &amp; Date: <span class="sign-underline">24/9/2026</span></div>
+        </div>
+        <div class="cover-sign-row">
+          <div>State Coordinator: <span class="sign-underline">OYENUGA MUJISOLA JOKE</span></div>
+          <div>Signature &amp; Date: <span class="sign-underline">24/9/2026</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PAGE 2: KPI TABLE -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="kpi-meta-box">
+      <div class="kpi-meta-top">
+        <div>STATE: <b>CROSS RIVER</b></div>
+        <div>ZONE: <b>OGOJA</b></div>
+        <div>QUARTER: <b>THIRD QUARTER, 2026</b></div>
+      </div>
+      <div class="kpi-meta-sub">NAME OF CDS: DIGITAL LITERACY</div>
+      <div class="kpi-meta-sub">STATE: CROSS RIVER STATE</div>
+    </div>
+
+    <table class="kpi-table">
+      <thead>
+        <tr>
+          <th rowspan="2" style="width: 4%;">S<br>/<br>N</th>
+          <th rowspan="2" style="width: 13%;">PROGRAMME</th>
+          <th rowspan="2" style="width: 17%;">TITLES OF ACTIVITIES</th>
+          <th colspan="2" style="width: 18%;">LOCATION</th>
+          <th colspan="2" style="width: 12%;">NUMBER OF BENEFICIARY</th>
+          <th rowspan="2" style="width: 6%;">TOTAL</th>
+          <th rowspan="2" style="width: 30%;">DESCRIPTION/NUMBER OF ITEMS DONATED</th>
+        </tr>
+        <tr>
+          <th style="width: 12%;">COMMUNITY / SCHOOL</th>
+          <th style="width: 6%;">LGA</th>
+          <th style="width: 6%;">MALE</th>
+          <th style="width: 6%;">FEMALE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="center top-align">1.</td>
+          <td class="top-align">Digital Literacy Outreach/Sensitization</td>
+          <td class="top-align">Learn how to use digital tools for research and educational development</td>
+          <td class="top-align">St. Joseph's Vicinity, Obudu</td>
+          <td class="center top-align">Obudu</td>
+          <td class="center top-align">20</td>
+          <td class="center top-align">20</td>
+          <td class="center top-align bold">40</td>
+          <td class="top-align justify">
+            2 Digital Literacy Champions conducted grassroot sensitization for youth and students in St. Joseph's Vicinity, Obudu. Practical sessions on smartphone navigation, e-learning access, and online educational tools were carried out.<br><b>Items Donated: NIL</b>
+          </td>
+        </tr>
+        <tr>
+          <td class="center top-align">2.</td>
+          <td class="top-align">Digital Literacy Outreach/Sensitization</td>
+          <td class="top-align">Training of new champions and public sector digital literacy sensitization</td>
+          <td class="top-align">Obudu Urban Dev. Authority (OUDA)</td>
+          <td class="center top-align">Obudu</td>
+          <td class="center top-align">11</td>
+          <td class="center top-align">11</td>
+          <td class="center top-align bold">22</td>
+          <td class="top-align justify">
+            11 Digital Literacy Champions conducted an advocacy and onboarding training session at the Obudu Urban Development Authority, mentoring new champions and sensitizing agency staff on workplace digital tools, cyber hygiene, and data security.<br><b>Items Donated: NIL</b>
+          </td>
+        </tr>
+        <tr>
+          <td class="center top-align">3.</td>
+          <td class="top-align">Digital Literacy Outreach/Sensitization</td>
+          <td class="top-align">Utilize free digital tools and resources for business and scam prevention</td>
+          <td class="top-align">Obudu Main Market, Obudu</td>
+          <td class="center top-align">Obudu</td>
+          <td class="center top-align">44</td>
+          <td class="center top-align">66</td>
+          <td class="center top-align bold">110</td>
+          <td class="top-align justify">
+            11 Digital Literacy Champions engaged market men and women at Obudu Main Market. Traders were enlightened on mobile financial transactions, digital record keeping, and detecting/avoiding financial scams and fraud.<br><b>Items Donated: NIL</b>
+          </td>
+        </tr>
+        <tr class="total-row">
+          <td colspan="5" class="center bold">TOTAL BENEFICIARIES (Q3 2026)</td>
+          <td class="center bold">75</td>
+          <td class="center bold">97</td>
+          <td class="center bold">172</td>
+          <td class="center bold">Total Items Donated: NIL</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="kpi-sign-section">
+      <div class="kpi-sign-line">
+        <div>NAME OF HEAD (CDS): <span class="dotted-line">OKO JOHN</span></div>
+        <div>SIGNATURE: <span class="dotted-line">&nbsp;</span></div>
+        <div>DATE: <span class="dotted-line">24/9/2026</span></div>
+      </div>
+      <div class="kpi-sign-line" style="margin-top: 12px;">
+        <div>NAME OF STATE COORDINATOR: <span class="dotted-line">OYENUGA MUJISOLA JOKE</span></div>
+        <div>SIGNATURE: <span class="dotted-line">&nbsp;</span></div>
+        <div>DATE: <span class="dotted-line">24/9/2026</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PAGE 3: GALLERY - MONTH 1 (JULY 2026) -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="gallery-page-container">
+      <div class="gallery-heading">GALLERY:</div>
+      <div class="gallery-caption-title">
+        St. Joseph's Vicinity, Obudu: D.L. champions sensitizing youth and students on mobile digital tools 2/7/2026
+      </div>
+      <div class="gallery-grid-3">
+        <div class="gallery-card">
+          <img src="IMG-20260925-WA0043.jpg" alt="Campaign Banner Presentation">
+          <div class="gallery-card-desc"><b>Activity Launch:</b> Two DLC representatives presenting official DL4ALL / NITDA banner at Obudu community.</div>
+        </div>
+        <div class="gallery-card">
+          <img src="IMG-20260925-WA0042.jpg" alt="Student Smartphone Mentorship">
+          <div class="gallery-card-desc"><b>One-on-One Tutoring:</b> DLC member coaching a secondary student on smartphone e-learning tools.</div>
+        </div>
+        <div class="gallery-card">
+          <img src="IMG-20260925-WA0040.jpg" alt="Youth Digital Guidance">
+          <div class="gallery-card-desc"><b>Youth Coaching:</b> DLC corps member guiding a community youth on mobile productivity apps.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PAGE 4: GALLERY - MONTH 2 (AUGUST 2026) -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="gallery-page-container">
+      <div class="gallery-heading">GALLERY:</div>
+      <div class="gallery-caption-title">
+        Obudu Urban Development Authority, Obudu: Training of new D.L. champions and institutional advocacy 6/8/2026
+      </div>
+      <div class="gallery-grid-2">
+        <div class="gallery-card">
+          <img src="IMG-20260925-WA0041.jpg" alt="OUDA Entrance Delegation">
+          <div class="gallery-card-desc"><b>Delegation Presentation:</b> 10 DLC corps members with official DL4ALL banner at OUDA complex.</div>
+        </div>
+        <div class="gallery-card">
+          <img src="IMG-20260925-WA0044.jpg" alt="OUDA Headquarters Official Visit">
+          <div class="gallery-card-desc"><b>Institutional Advocacy:</b> Full DLC squad at the Obudu Urban Development Authority building facade.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PAGE 5: GALLERY - MONTH 3 (SEPTEMBER 2026) -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="gallery-page-container">
+      <div class="gallery-heading">GALLERY:</div>
+      <div class="gallery-caption-title">
+        Obudu Main Market, Obudu: D.L. champions enlightening traders on financial crimes and digital business tools 17/9/2026
+      </div>
+      <div class="gallery-grid-3">
+        <div class="gallery-card">
+          <img src="IMG-20260919-WA0070.jpg" alt="Market Outreach Squad Banner">
+          <div class="gallery-card-desc"><b>Market Field Campaign:</b> DLC team deployed in Obudu Market with banner and NITDA curriculum flyers.</div>
+        </div>
+        <div class="gallery-card">
+          <img src="IMG-20260919-WA0102.jpg" alt="Market Woman Training">
+          <div class="gallery-card-desc"><b>Trader Empowerment:</b> DLC members demonstrating mobile customer records to a market woman.</div>
+        </div>
+        <div class="gallery-card">
+          <img src="IMG-20260925-WA0039.jpg" alt="Textile Stall Tutoring">
+          <div class="gallery-card-desc"><b>Shop-to-Shop Sensitization:</b> DLC member coaching a young textile artisan on safe mobile transactions.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

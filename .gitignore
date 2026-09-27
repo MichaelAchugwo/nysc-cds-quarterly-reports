@@ -1,0 +1,17 @@
+# Compiled PDF Deliverables
+*.pdf
+_sources/*.pdf
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+
+# Temporary Office Files
+~$*
+*.tmp
+
+# IDE / Editor Files
+.vscode/
+.idea/

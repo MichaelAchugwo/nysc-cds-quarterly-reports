@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DLC SECOND QUARTER REPORT 2026 (FIXED)</title>
+<style>
+  @page {
+    size: letter landscape;
+    margin: 10mm 14mm 10mm 14mm;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    font-size: 10pt;
+    line-height: 1.25;
+    background: #fff;
+  }
+
+  /* Header Section */
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  .header-logo-left {
+    width: 62px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .header-logo-right {
+    width: 105px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .header-center {
+    text-align: center;
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+  .header-title {
+    font-size: 12.5pt;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    margin: 0 0 3px 0;
+    text-transform: uppercase;
+  }
+  .header-subtitle-dept {
+    font-size: 11pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0 0 3px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+  .header-subtitle-group {
+    font-size: 10.5pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+
+  /* Metadata Section */
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10pt;
+    font-weight: bold;
+    margin: 8px 0 10px 0;
+    padding: 0 10px;
+  }
+  .meta-item {
+    display: inline-flex;
+    align-items: baseline;
+  }
+  .meta-val {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    min-width: 90px;
+    padding: 0 8px 1px 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /* Table Section */
+  table.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  table.report-table th,
+  table.report-table td {
+    border: 1px solid #000;
+    padding: 6px 7px;
+    vertical-align: top;
+    font-size: 9.5pt;
+  }
+  table.report-table th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 9pt;
+    letter-spacing: 0.2px;
+    padding: 6px 4px;
+  }
+  
+  .col-sn { width: 4.5%; text-align: center; }
+  .col-group { width: 11.5%; text-align: left; }
+  .col-cm { width: 6.5%; text-align: center; }
+  .col-loc { width: 12.5%; text-align: left; }
+  .col-lga { width: 7%; text-align: center; }
+  .col-act { width: 33%; text-align: justify; }
+  .col-ach { width: 14%; text-align: left; }
+  .col-rem { width: 11%; text-align: left; }
+
+  td.center { text-align: center; }
+  td.justify { text-align: justify; text-justify: inter-word; }
+
+  .act-title {
+    font-weight: bold;
+  }
+
+  /* Sign-off Footer */
+  .sign-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 14px;
+    padding: 0 10px;
+    font-size: 10pt;
+    font-weight: bold;
+  }
+  .sign-line {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    min-width: 220px;
+    padding: 0 12px 1px 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header-container">
+    <img src="file:///C:/Users/miket/Documents/CDS Quarter/nysc_logo.png" class="header-logo-left" alt="NYSC Logo">
+    <div class="header-center">
+      <div class="header-title">National Youth Service Corps National Directorate Headquarters</div>
+      <div class="header-subtitle-dept">Community Development Service Department</div>
+      <div class="header-subtitle-group">Digital Literacy Community Development Service Group</div>
+    </div>
+    <img src="file:///C:/Users/miket/Documents/CDS Quarter/dl4all_logo.jpg" class="header-logo-right" alt="DL4ALL Logo">
+  </div>
+
+  <!-- Metadata -->
+  <div class="meta-row">
+    <div class="meta-item">STATE: <span class="meta-val">CROSS RIVER</span></div>
+    <div class="meta-item">ZONE: <span class="meta-val">OGOJA</span></div>
+    <div class="meta-item">QUARTER: <span class="meta-val">2ND</span></div>
+    <div class="meta-item">YEAR: <span class="meta-val">2026</span></div>
+  </div>
+
+  <!-- Table -->
+  <table class="report-table">
+    <thead>
+      <tr>
+        <th class="col-sn">S/N</th>
+        <th class="col-group">NAME OF GROUP</th>
+        <th class="col-cm">NUMBER<br>OF C/MS</th>
+        <th class="col-loc">LOCATION</th>
+        <th class="col-lga">LGA</th>
+        <th class="col-act">NATURE OF ACTIVITIES</th>
+        <th class="col-ach">ACHIEVEMENTS</th>
+        <th class="col-rem">REMARKS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-sn">1.</td>
+        <td class="col-group">Digital Literacy CDS Group</td>
+        <td class="col-cm">18</td>
+        <td class="col-loc">Obudu Market, Obudu</td>
+        <td class="col-lga">Obudu</td>
+        <td class="col-act">
+          <span class="act-title">OUTREACH:</span> The CDS members visited Obudu Market to promote digital literacy among market men and women. The focus of the outreach was communication and collaboration in the digital space. Members, known as DLCs (Digital Literacy Champions), were grouped into teams of two per team and moved from shop to shop, engaging traders in practical discussions on how digital tools can enhance their business operations. DLCs demonstrated how personal gadgets (both smartphones and feature button phones) could be used to improve communication with customers and suppliers. For traders using basic phones, DLCs provided hands-on guidance on making calls, sending text messages, and saving contacts.
+        </td>
+        <td class="col-ach">
+          Market men and women, including commercial motorcyclists and drivers, received practical guidance on the use of mobile phones (both basic and smartphones) to maximize effective communication in business operations.
+        </td>
+        <td class="col-rem">
+          Lots of market men and women were taught the basic use of mobile phones for effective communication.
+        </td>
+      </tr>
+      <tr>
+        <td class="col-sn">2.</td>
+        <td class="col-group">Digital Literacy CDS Group</td>
+        <td class="col-cm">10</td>
+        <td class="col-loc">Bishiri Market, Obudu</td>
+        <td class="col-lga">Obudu</td>
+        <td class="col-act">
+          <span class="act-title">CAMPAIGN:</span> DLCs carried out a digital awareness campaign across Bishiri Market in Obudu, visiting various shops and business offices located along the market corridor. Traders and artisans were educated on the practical everyday use of their mobile devices, basic bookkeeping apps, and essential tips for avoiding financial fraud and mobile money scams.
+        </td>
+        <td class="col-ach">
+          About 20 shops were visited and successfully trained on performing basic mobile phone tasks and digital content creation for their businesses.
+        </td>
+        <td class="col-rem">
+          Impactful though tasking due to trekking under the sun from shop to shop.
+        </td>
+      </tr>
+      <tr>
+        <td class="col-sn">3.</td>
+        <td class="col-group">Digital Literacy CDS Group</td>
+        <td class="col-cm">4</td>
+        <td class="col-loc">Handmaid Girls College, Obudu</td>
+        <td class="col-lga">Obudu</td>
+        <td class="col-act">
+          <span class="act-title">SCHOOL OUTREACH:</span> DLC members engaged students of Handmaid Girls College, Hagco Obudu, in interactive sessions introducing digital tools to enhance academic productivity in the school environment. Practical, hands-on demonstrations were conducted on using educational tools and platforms including Google Search, Gemini, ChatGPT, and YouTube for research and self-paced learning.
+        </td>
+        <td class="col-ach">
+          Students were enlightened on free digital tools available for academic excellence, with live practical demonstrations conducted for them.
+        </td>
+        <td class="col-rem">
+          Most of the students were enthusiastic and appreciative of the digital literacy outreach and exposure to modern digital tools.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Signatures -->
+  <div class="sign-container">
+    <div>SCHEDULE OFFICER: <span class="sign-line">OKO JOHN</span></div>
+    <div>SIGNATURE &amp; DATE: <span class="sign-line">26/6/2026</span></div>
+  </div>
+
+</body>
+</html>

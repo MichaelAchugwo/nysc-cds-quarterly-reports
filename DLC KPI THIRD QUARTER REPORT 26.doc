@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DLC KPI THIRD QUARTER REPORT 26</title>
+<style>
+  @page {
+    size: letter landscape;
+    margin: 8mm 12mm 8mm 12mm;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    font-size: 9.5pt;
+    line-height: 1.25;
+    background: #fff;
+  }
+
+  .page {
+    page-break-after: always;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .page:last-child {
+    page-break-after: avoid;
+  }
+
+  /* Header Section */
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  .header-logo-left {
+    width: 60px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .header-logo-right {
+    width: 102px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .header-center {
+    text-align: center;
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+  .header-title {
+    font-size: 12.5pt;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    margin: 0 0 2px 0;
+    text-transform: uppercase;
+  }
+  .header-subtitle-dept {
+    font-size: 11pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0 0 2px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+  .header-subtitle-group {
+    font-size: 10.5pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0 0 2px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+  .header-subtitle-lga {
+    font-size: 10pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+
+  /* Cover Page Styles */
+  .cover-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+  }
+  .cover-report-title {
+    font-size: 16pt;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 50px 0;
+  }
+  .cover-signatures {
+    width: 100%;
+    margin-top: 40px;
+    font-size: 10pt;
+    font-weight: bold;
+  }
+  .cover-sign-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+  .sign-underline {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    min-width: 250px;
+    padding: 0 15px 1px 15px;
+    text-align: center;
+  }
+
+  /* Table Page Styles */
+  .kpi-meta-box {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 9.5pt;
+  }
+  .kpi-meta-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    padding: 0 5px;
+  }
+  .kpi-meta-sub {
+    border: 1px solid #000;
+    padding: 4px 8px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    background: #f9f9f9;
+  }
+
+  table.kpi-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  table.kpi-table th,
+  table.kpi-table td {
+    border: 1px solid #000;
+    padding: 5px 6px;
+    vertical-align: middle;
+    font-size: 8.8pt;
+    line-height: 1.22;
+  }
+  table.kpi-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+    font-size: 8.5pt;
+    letter-spacing: 0.2px;
+    padding: 4px 3px;
+  }
+  td.top-align {
+    vertical-align: top;
+  }
+  td.center {
+    text-align: center;
+  }
+  td.justify {
+    text-align: justify;
+  }
+  td.bold {
+    font-weight: bold;
+  }
+  .total-row td {
+    background-color: #f7f7f7;
+    font-weight: bold;
+    font-size: 9pt;
+  }
+
+  .kpi-sign-section {
+    margin-top: 15px;
+    padding: 0 10px;
+    font-size: 9.2pt;
+    font-weight: bold;
+  }
+  .kpi-sign-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+  .dotted-line {
+    border-bottom: 1px dotted #000;
+    display: inline-block;
+    min-width: 160px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  /* Gallery Pages */
+  .gallery-page-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery-heading {
+    font-weight: bold;
+    font-size: 11pt;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    text-decoration: underline;
+  }
+  .gallery-caption-title {
+    font-weight: bold;
+    font-size: 10pt;
+    margin-bottom: 12px;
+    color: #111;
+  }
+  .gallery-grid-3 {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 12px;
+    flex-grow: 1;
+    align-items: center;
+  }
+  .gallery-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    flex-grow: 1;
+    align-items: center;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  .gallery-card {
+    border: 1px solid #ccc;
+    background: #fafafa;
+    padding: 6px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .gallery-card img {
+    max-width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+  }
+  .gallery-card-desc {
+    margin-top: 6px;
+    font-size: 8.5pt;
+    color: #333;
+    line-height: 1.25;
+  }
+</style>
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- PAGE 1: COVER PAGE -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="header-container">
+      <img src="data:image/png;base64,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" class="header-logo-left" alt="NYSC Logo">
+      <div class="header-center">
+        <div class="header-title">National Youth Service Corps National Directorate Headquarters</div>
+        <div class="header-subtitle-dept">Community Development Service Department</div>
+        <div class="header-subtitle-group">Digital Literacy Community Development Service Group</div>
+        <div class="header-subtitle-lga">Obudu L.G.A, Cross River</div>
+      </div>
+      <img src="data:image/jpeg;base64,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" class="header-logo-right" alt="DL4ALL Logo">
+    </div>
+
+    <div class="cover-body">
+      <div></div>
+      <div class="cover-report-title">
+        3RD QUARTER CDS KEY PERFORMANCE INDICATOR REPORT, 2026
+      </div>
+
+      <div class="cover-signatures">
+        <div class="cover-sign-row">
+          <div>Schedule Officer: <span class="sign-underline">OKO JOHN</span></div>
+          <div>Signature &amp; Date: <span class="sign-underline">24/9/2026</span></div>
+        </div>
+        <div class="cover-sign-row">
+          <div>State Coordinator: <span class="sign-underline">OYENUGA MUJISOLA JOKE</span></div>
+          <div>Signature &amp; Date: <span class="sign-underline">24/9/2026</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PAGE 2: KPI TABLE -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="kpi-meta-box">
+      <div class="kpi-meta-top">
+        <div>STATE: <b>CROSS RIVER</b></div>
+        <div>ZONE: <b>OGOJA</b></div>
+        <div>QUARTER: <b>THIRD QUARTER, 2026</b></div>
+      </div>
+      <div class="kpi-meta-sub">NAME OF CDS: DIGITAL LITERACY</div>
+      <div class="kpi-meta-sub">STATE: CROSS RIVER STATE</div>
+    </div>
+
+    <table class="kpi-table">
+      <thead>
+        <tr>
+          <th rowspan="2" style="width: 4%;">S<br>/<br>N</th>
+          <th rowspan="2" style="width: 13%;">PROGRAMME</th>
+          <th rowspan="2" style="width: 17%;">TITLES OF ACTIVITIES</th>
+          <th colspan="2" style="width: 18%;">LOCATION</th>
+          <th colspan="2" style="width: 12%;">NUMBER OF BENEFICIARY</th>
+          <th rowspan="2" style="width: 6%;">TOTAL</th>
+          <th rowspan="2" style="width: 30%;">DESCRIPTION/NUMBER OF ITEMS DONATED</th>
+        </tr>
+        <tr>
+          <th style="width: 12%;">COMMUNITY / SCHOOL</th>
+          <th style="width: 6%;">LGA</th>
+          <th style="width: 6%;">MALE</th>
+          <th style="width: 6%;">FEMALE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="center top-align">1.</td>
+          <td class="top-align">Digital Literacy Outreach/Sensitization</td>
+          <td class="top-align">Learn how to use digital tools for research and educational development</td>
+          <td class="top-align">St. Joseph's Vicinity, Obudu</td>
+          <td class="center top-align">Obudu</td>
+          <td class="center top-align">20</td>
+          <td class="center top-align">20</td>
+          <td class="center top-align bold">40</td>
+          <td class="top-align justify">
+            2 Digital Literacy Champions conducted grassroot sensitization for youth and students in St. Joseph's Vicinity, Obudu. Practical sessions on smartphone navigation, e-learning access, and online educational tools were carried out.<br><b>Items Donated: NIL</b>
+          </td>
+        </tr>
+        <tr>
+          <td class="center top-align">2.</td>
+          <td class="top-align">Digital Literacy Outreach/Sensitization</td>
+          <td class="top-align">Training of new champions and public sector digital literacy sensitization</td>
+          <td class="top-align">Obudu Urban Dev. Authority (OUDA)</td>
+          <td class="center top-align">Obudu</td>
+          <td class="center top-align">11</td>
+          <td class="center top-align">11</td>
+          <td class="center top-align bold">22</td>
+          <td class="top-align justify">
+            11 Digital Literacy Champions conducted an advocacy and onboarding training session at the Obudu Urban Development Authority, mentoring new champions and sensitizing agency staff on workplace digital tools, cyber hygiene, and data security.<br><b>Items Donated: NIL</b>
+          </td>
+        </tr>
+        <tr>
+          <td class="center top-align">3.</td>
+          <td class="top-align">Digital Literacy Outreach/Sensitization</td>
+          <td class="top-align">Utilize free digital tools and resources for business and scam prevention</td>
+          <td class="top-align">Obudu Main Market, Obudu</td>
+          <td class="center top-align">Obudu</td>
+          <td class="center top-align">44</td>
+          <td class="center top-align">66</td>
+          <td class="center top-align bold">110</td>
+          <td class="top-align justify">
+            11 Digital Literacy Champions engaged market men and women at Obudu Main Market. Traders were enlightened on mobile financial transactions, digital record keeping, and detecting/avoiding financial scams and fraud.<br><b>Items Donated: NIL</b>
+          </td>
+        </tr>
+        <tr class="total-row">
+          <td colspan="5" class="center bold">TOTAL BENEFICIARIES (Q3 2026)</td>
+          <td class="center bold">75</td>
+          <td class="center bold">97</td>
+          <td class="center bold">172</td>
+          <td class="center bold">Total Items Donated: NIL</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="kpi-sign-section">
+      <div class="kpi-sign-line">
+        <div>NAME OF HEAD (CDS): <span class="dotted-line">OKO JOHN</span></div>
+        <div>SIGNATURE: <span class="dotted-line">&nbsp;</span></div>
+        <div>DATE: <span class="dotted-line">24/9/2026</span></div>
+      </div>
+      <div class="kpi-sign-line" style="margin-top: 12px;">
+        <div>NAME OF STATE COORDINATOR: <span class="dotted-line">OYENUGA MUJISOLA JOKE</span></div>
+        <div>SIGNATURE: <span class="dotted-line">&nbsp;</span></div>
+        <div>DATE: <span class="dotted-line">24/9/2026</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PAGE 3: GALLERY - MONTH 1 (JULY 2026) -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="gallery-page-container">
+      <div class="gallery-heading">GALLERY:</div>
+      <div class="gallery-caption-title">
+        St. Joseph's Vicinity, Obudu: D.L. champions sensitizing youth and students on mobile digital tools 2/7/2026
+      </div>
+      <div class="gallery-grid-3">
+        <div class="gallery-card">
+          <img src="IMG-20260925-WA0043.jpg" alt="Campaign Banner Presentation">
+          <div class="gallery-card-desc"><b>Activity Launch:</b> Two DLC representatives presenting official DL4ALL / NITDA banner at Obudu community.</div>
+        </div>
+        <div class="gallery-card">
+          <img src="IMG-20260925-WA0042.jpg" alt="Student Smartphone Mentorship">
+          <div class="gallery-card-desc"><b>One-on-One Tutoring:</b> DLC member coaching a secondary student on smartphone e-learning tools.</div>
+        </div>
+        <div class="gallery-card">
+          <img src="IMG-20260925-WA0040.jpg" alt="Youth Digital Guidance">
+          <div class="gallery-card-desc"><b>Youth Coaching:</b> DLC corps member guiding a community youth on mobile productivity apps.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PAGE 4: GALLERY - MONTH 2 (AUGUST 2026) -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="gallery-page-container">
+      <div class="gallery-heading">GALLERY:</div>
+      <div class="gallery-caption-title">
+        Obudu Urban Development Authority, Obudu: Training of new D.L. champions and institutional advocacy 6/8/2026
+      </div>
+      <div class="gallery-grid-2">
+        <div class="gallery-card">
+          <img src="IMG-20260925-WA0041.jpg" alt="OUDA Entrance Delegation">
+          <div class="gallery-card-desc"><b>Delegation Presentation:</b> 10 DLC corps members with official DL4ALL banner at OUDA complex.</div>
+        </div>
+        <div class="gallery-card">
+          <img src="IMG-20260925-WA0044.jpg" alt="OUDA Headquarters Official Visit">
+          <div class="gallery-card-desc"><b>Institutional Advocacy:</b> Full DLC squad at the Obudu Urban Development Authority building facade.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PAGE 5: GALLERY - MONTH 3 (SEPTEMBER 2026) -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="gallery-page-container">
+      <div class="gallery-heading">GALLERY:</div>
+      <div class="gallery-caption-title">
+        Obudu Main Market, Obudu: D.L. champions enlightening traders on financial crimes and digital business tools 17/9/2026
+      </div>
+      <div class="gallery-grid-3">
+        <div class="gallery-card">
+          <img src="IMG-20260919-WA0070.jpg" alt="Market Outreach Squad Banner">
+          <div class="gallery-card-desc"><b>Market Field Campaign:</b> DLC team deployed in Obudu Market with banner and NITDA curriculum flyers.</div>
+        </div>
+        <div class="gallery-card">
+          <img src="IMG-20260919-WA0102.jpg" alt="Market Woman Training">
+          <div class="gallery-card-desc"><b>Trader Empowerment:</b> DLC members demonstrating mobile customer records to a market woman.</div>
+        </div>
+        <div class="gallery-card">
+          <img src="IMG-20260925-WA0039.jpg" alt="Textile Stall Tutoring">
+          <div class="gallery-card-desc"><b>Shop-to-Shop Sensitization:</b> DLC member coaching a young textile artisan on safe mobile transactions.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

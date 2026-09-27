@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{REPORT_TITLE}}</title>
+<style>
+  @page {
+    size: letter landscape;
+    margin: 8mm 12mm 8mm 12mm;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    font-size: 9.5pt;
+    line-height: 1.2;
+    background: #fff;
+  }
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  .header-logo-left { width: 60px; height: auto; flex-shrink: 0; }
+  .header-logo-right { width: 100px; height: auto; flex-shrink: 0; }
+  .header-center { text-align: center; flex-grow: 1; padding: 0 10px; }
+  .header-title { font-size: 12.5pt; font-weight: bold; letter-spacing: 0.3px; margin: 0 0 2px 0; text-transform: uppercase; }
+  .header-subtitle-dept { font-size: 11pt; font-weight: bold; text-decoration: underline; margin: 0 0 2px 0; text-transform: uppercase; letter-spacing: 0.2px; }
+  .header-subtitle-group { font-size: 10.5pt; font-weight: bold; text-decoration: underline; margin: 0; text-transform: uppercase; letter-spacing: 0.2px; }
+  
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9.5pt;
+    font-weight: bold;
+    margin: 6px 0 8px 0;
+    padding: 0 5px;
+  }
+  .meta-item { display: inline-flex; align-items: baseline; }
+  .meta-val {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    min-width: 90px;
+    padding: 0 8px 1px 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  table.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  table.report-table th,
+  table.report-table td {
+    border: 1px solid #000;
+    padding: 5px 6px;
+    vertical-align: top;
+    font-size: 9pt;
+    line-height: 1.22;
+  }
+  table.report-table th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 8.8pt;
+    letter-spacing: 0.2px;
+    padding: 5px 4px;
+  }
+  
+  .col-sn { width: 4.5%; text-align: center; }
+  .col-group { width: 12%; text-align: left; }
+  .col-cm { width: 6.5%; text-align: center; }
+  .col-loc { width: 13.5%; text-align: left; }
+  .col-lga { width: 7%; text-align: center; }
+  .col-act { width: 32%; text-align: justify; }
+  .col-ach { width: 13.5%; text-align: left; }
+  .col-rem { width: 11%; text-align: left; }
+
+  td.center { text-align: center; }
+  td.dash { text-align: center; font-weight: bold; vertical-align: middle; }
+  .act-title { font-weight: bold; }
+
+  .sign-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 12px;
+    padding: 0 5px;
+    font-size: 9.5pt;
+    font-weight: bold;
+  }
+  .sign-line {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    min-width: 220px;
+    padding: 0 12px 1px 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <div class="header-container">
+    <img src="../_sources/nysc_logo.png" class="header-logo-left" alt="NYSC Logo">
+    <div class="header-center">
+      <div class="header-title">National Youth Service Corps National Directorate Headquarters</div>
+      <div class="header-subtitle-dept">Community Development Service Department</div>
+      <div class="header-subtitle-group">{{GROUP_NAME_UPPER}}</div>
+    </div>
+    <!-- Optional Second Logo (e.g., DL4ALL or empty spacer) -->
+    {{OPTIONAL_RIGHT_LOGO}}
+  </div>
+
+  <div class="meta-row">
+    <div class="meta-item">STATE: <span class="meta-val">{{STATE}}</span></div>
+    <div class="meta-item">ZONE: <span class="meta-val">{{ZONE}}</span></div>
+    <div class="meta-item">QUARTER: <span class="meta-val">{{QUARTER}}</span></div>
+    <div class="meta-item">YEAR: <span class="meta-val">{{YEAR}}</span></div>
+  </div>
+
+  <table class="report-table">
+    <thead>
+      <tr>
+        <th class="col-sn">S/N</th>
+        <th class="col-group">NAME OF GROUP</th>
+        <th class="col-cm">NUMBER<br>OF C/MS</th>
+        <th class="col-loc">LOCATION</th>
+        <th class="col-lga">LGA</th>
+        <th class="col-act">NATURE OF ACTIVITIES</th>
+        <th class="col-ach">ACHIEVEMENTS</th>
+        <th class="col-rem">REMARKS</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{TABLE_ROWS}}
+    </tbody>
+  </table>
+
+  <div class="sign-container">
+    <div>SCHEDULE OFFICER: <span class="sign-line">{{SCHEDULE_OFFICER}}</span></div>
+    <div>SIGNATURE &amp; DATE: <span class="sign-line">{{SIGN_DATE}}</span></div>
+  </div>
+
+</body>
+</html>
