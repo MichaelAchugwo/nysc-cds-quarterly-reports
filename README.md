@@ -43,9 +43,9 @@ chrome --headless=new --disable-gpu --no-sandbox --no-pdf-header-footer --print-
 * 📝 [**`DLC KPI THIRD QUARTER REPORT 26.doc`**](DLC%20KPI%20THIRD%20QUARTER%20REPORT%2026.doc) — Editable Microsoft Word document for the KPI report.
 
 ### 2. Environmental Protection & Sanitation CDS Group
-* 📄 **`ENVIRONMENTAL CDS THIRD QUARTER REPORT 2026.pdf`** *(Recreatable)* — Official 1-page landscape quarterly report table (July: 55, August: `-`, Sept: 35; Grand Total: 90; Donated: *Baskets, Brooms, Packers and Mop*). Master: `_sources/ENVIRONMENTAL CDS THIRD QUARTER REPORT 2026.html`.
+* 📄 **`ENVIRONMENTAL CDS THIRD QUARTER REPORT 2026.pdf`** *(Recreatable)* — Official 1-page landscape quarterly report table (July: 55, August: 40, Sept: 35; Grand Total: 130; Donated: *Baskets, Brooms, Packers and Mop*). Master: `_sources/ENVIRONMENTAL CDS THIRD QUARTER REPORT 2026.html`.
 * 📝 [**`ENVIRONMENTAL CDS THIRD QUARTER REPORT 2026.doc`**](ENVIRONMENTAL%20CDS%20THIRD%20QUARTER%20REPORT%202026.doc) — Editable Microsoft Word document.
-* 📊 **`ENVIRONMENTAL CDS KPI THIRD QUARTER REPORT 26.pdf`** *(Recreatable)* — Comprehensive 4-page submission pack (Cover page, KPI performance matrix, and monthly photo galleries for July and September; August marked `-`). Master: `_sources/ENVIRONMENTAL CDS KPI THIRD QUARTER REPORT 26.html`.
+* 📊 **`ENVIRONMENTAL CDS KPI THIRD QUARTER REPORT 26.pdf`** *(Recreatable)* — Comprehensive 5-page submission pack (Cover page, KPI performance matrix, and 3 monthly photo galleries for July, August, and September). Master: `_sources/ENVIRONMENTAL CDS KPI THIRD QUARTER REPORT 26.html`.
 * 📝 [**`ENVIRONMENTAL CDS KPI THIRD QUARTER REPORT 26.doc`**](ENVIRONMENTAL%20CDS%20KPI%20THIRD%20QUARTER%20REPORT%2026.doc) — Editable Microsoft Word document for the KPI report.
 
 ### 3. Automation Scripts & Templates
@@ -71,9 +71,9 @@ chrome --headless=new --disable-gpu --no-sandbox --no-pdf-header-footer --print-
 | Month | Activity / Focus | Location | C/Ms | Male | Female | Total | Donated Items |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | **July 2026** | Street sweeping, refuse disposal & hygiene sensitization | Ogoja Road, Obudu | 11 | 30 | 25 | 55 | NIL |
-| **August 2026** | *Recess / Inactive Month* | - | - | - | - | - | - |
+| **August 2026** | Market sanitation & trader hygiene sensitization | Obudu Market, Obudu | 11 | 10 | 30 | 40 | NIL |
 | **Sept 2026** | School waste management & hygiene outreach | Handmaids Int'l Nursery/Primary School | 3 | 15 | 20 | 35 | Baskets, Brooms, Packers and Mop |
-| **Total** | | | | **45** | **45** | **90** | **Baskets, Brooms, Packers and Mop** |
+| **Total** | | | | **55** | **75** | **130** | **Baskets, Brooms, Packers and Mop** |
 
 ---
 

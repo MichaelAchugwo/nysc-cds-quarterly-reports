@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -202,14 +202,20 @@
         </td>
       </tr>
       <tr>
-        <td class="col-sn dash">2.</td>
-        <td class="dash">-</td>
-        <td class="dash">-</td>
-        <td class="dash">-</td>
-        <td class="dash">-</td>
-        <td class="dash">-</td>
-        <td class="dash">-</td>
-        <td class="dash">-</td>
+        <td class="col-sn">2.</td>
+        <td class="col-group">Environmental CDS Group</td>
+        <td class="col-cm">11</td>
+        <td class="col-loc">Obudu Market, Obudu</td>
+        <td class="col-lga">Obudu</td>
+        <td class="col-act">
+          <span class="act-title">OUTREACH:</span> Market sanitation and trader environmental hygiene sensitization conducted at Obudu Market, Obudu. 11 corps members sensitized market women, traders, and meat sellers on proper waste management, keeping market stalls and walkways clean, avoiding refuse accumulation around food items, and preventing environmental health hazards.
+        </td>
+        <td class="col-ach">
+          40 market traders and sellers (10 males and 30 females) were sensitized on market hygiene, refuse disposal, and maintaining sanitary stall surroundings.
+        </td>
+        <td class="col-rem">
+          Market traders and stall owners actively engaged with corps members and pledged to uphold cleaner market environments.
+        </td>
       </tr>
       <tr>
         <td class="col-sn">3.</td>
